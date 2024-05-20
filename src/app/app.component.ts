@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { HeroesComponent } from './heroes/heroes.component'
+import { MessagesComponent } from './messages/messages.component'
 
 
 @Component({
@@ -10,6 +11,7 @@ import { HeroesComponent } from './heroes/heroes.component'
   imports: [
     RouterOutlet,
     HeroesComponent,
+    MessagesComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
