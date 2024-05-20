@@ -5,6 +5,7 @@ import { NgFor, NgIf } from '@angular/common';
 import { Hero } from '../hero';
 import {HEROES} from '../mock-heroes';
 import { HeroDetailComponent } from '../hero-detail/hero-detail.component'
+import { HeroService } from '../hero.service';
 
 
 @Component({
@@ -22,8 +23,17 @@ import { HeroDetailComponent } from '../hero-detail/hero-detail.component'
 export class HeroesComponent {
   selectedHero?: Hero;
 
-  heroes: Hero[] = HEROES;
+  heroes: Hero[] = [];
 
+  constructor(private heroService: HeroService) {}
+
+  getHeroes(): void {
+    this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
+  }
+
+  ngOnInit(): void {
+    this.getHeroes();
+  }
   onSelect(hero: Hero){
     this.selectedHero = hero;
   }

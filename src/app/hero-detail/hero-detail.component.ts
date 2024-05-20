@@ -12,7 +12,6 @@ import { Hero } from '../hero';
     UpperCasePipe,
     FormsModule,
     NgIf,
-    Input,
   ],
   templateUrl: './hero-detail.component.html',
   styleUrl: './hero-detail.component.css'
