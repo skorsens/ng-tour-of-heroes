@@ -4,6 +4,7 @@ import { NgFor, NgIf } from '@angular/common';
 
 import { Hero } from '../hero';
 import {HEROES} from '../mock-heroes';
+import { HeroDetailComponent } from '../hero-detail/hero-detail.component'
 
 
 @Component({
@@ -13,6 +14,7 @@ import {HEROES} from '../mock-heroes';
     FormsModule,
     NgFor,
     NgIf,
+    HeroDetailComponent,
   ],
   templateUrl: './heroes.component.html',
   styleUrl: './heroes.component.css'
